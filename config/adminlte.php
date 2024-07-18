@@ -316,12 +316,11 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
+            'text' => 'Categories',
+            'url' => 'categories',
             'icon' => 'far fa-fw fa-file',
-            'label' => 4,
             'label_color' => 'success',
-            'active' => ['home*'],
+            'active' => ['categories*'],
         ],
         ['header' => 'account_settings'],
         [
