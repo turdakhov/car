@@ -321,6 +321,7 @@ return [
             'icon' => 'far fa-fw fa-file',
             'label' => 4,
             'label_color' => 'success',
+            'active' => ['home*'],
         ],
         ['header' => 'account_settings'],
         [

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $car = Car::first();
+
+        $category = $car->category;
+
+        // dd($category);
+
+
+        $category = Category::first();
+
+        // dd($category->cars);
+
+        $cars = $category->cars;
+
+
+        dd($category->active_cars);
+        // $filteredCars = $category->cars()->where('is_active', 1)->get();
+        // $ = $category->cars;
+
+
+
+        return view('home', compact('car'));
     }
 }
